@@ -1,11 +1,12 @@
 /* FOOTER */
 /* =============================== */
 footer {
-  background-color: rgb(199 197 197 / 10%)  ;
+  background-color: rgb(199 197 197 / 10%);
   padding: 10px;
 }
 
-.lineone, .linetwo {
+.lineone,
+.linetwo {
   display: flex;
   list-style: none;
   margin: 0;
@@ -25,6 +26,7 @@ nav ul li a {
 nav ul li a:hover {
   color: rgba(255, 255, 255, 0.75);
 }
+
 /* =============================== */
 
 /* PROFILE PICTURE */
@@ -40,6 +42,7 @@ nav ul li a:hover {
   box-shadow: 0px 0px 10px 5px rgba(54, 53, 53, 0.15);
   border: 5px solid rgba(255, 255, 255, 0.541);
 }
+
 /* =============================== */
 
 /* BIO */
@@ -53,7 +56,6 @@ nav ul li a:hover {
   margin-top: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-
 }
 
 .title {
@@ -64,6 +66,7 @@ nav ul li a:hover {
 .bio {
   transform: translate(-0%, -40px);
 }
+
 /* =============================== */
 
 /* CONTACT FORM */
@@ -115,6 +118,67 @@ h1 {
   color: #666284;
 }
 
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: #ebc0c4 2px solid;
+}
+
+.alert-danger {
+  --bs-alert-bg: #ebc0c4a8;
+}
+
+/* =============================== */
+
+/* PERFIL */
+/* =============================== */
+.contenedor-perfil {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.perfil-item {
+  width: 50%;
+  height: 300px;
+  border-radius: 0.5%;
+  margin: 10px auto;
+  background-color: #ffffffbf;
+  padding: 20px;
+  margin-top: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+  width: 90%;
+  left: 5%;
+}
+
+h5 {
+  text-align: center;
+  font-family: Calibri;
+  font-weight: bold;
+  color: #666284;
+}
+
+li,
+ul {
+  font-family: Calibri;
+  font-weight: bold;
+  color: #666284;
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* =============================== */
 
 /* MEDIA QUERY */
@@ -145,6 +209,10 @@ h1 {
   .form {
     width: 95%;
     padding: 20px;
+  }
+
+  .perfil-item {
+    width: 70%;
   }
 }
 
