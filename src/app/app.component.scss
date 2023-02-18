@@ -112,6 +112,11 @@ button[type="submit"] {
   border-color: #312a58;
 }
 
+#submit-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 h1 {
   font-family: Calibri;
   font-weight: bold;
