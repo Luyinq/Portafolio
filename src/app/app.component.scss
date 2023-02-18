@@ -1,3 +1,34 @@
+/* FOOTER */
+/* =============================== */
+footer {
+  background-color: rgb(199 197 197 / 10%)  ;
+  padding: 10px;
+}
+
+.lineone, .linetwo {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+/* =============================== */
+
+/* PROFILE PICTURE */
+/* =============================== */
 .profile-picture {
   border-radius: 50%;
   width: 220px;
@@ -9,44 +40,45 @@
   box-shadow: 0px 0px 10px 5px rgba(54, 53, 53, 0.15);
   border: 5px solid rgba(255, 255, 255, 0.541);
 }
+/* =============================== */
 
+/* BIO */
+/* =============================== */
 .contenedor-bio {
-  border-radius:0.5%;
+  border-radius: 0.5%;
   width: 60%;
   margin: 0 auto;
   background-color: #ffffffbf;
-  padding: 30px;
+  padding: 20px;
   margin-top: 80px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
 
 }
 
 .title {
   transform: translate(-0%, -60px);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .bio {
   transform: translate(-0%, -40px);
 }
+/* =============================== */
 
-@media (max-width: 1024px) {
-  .profile-picture {
-    width: 200px;
-    height: 200px;
-  }
-  .contenedor-bio {
-    width: 80%;
-  }
-  .title {
-    transform: translate(-0%, -50px);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  .bio {
-    transform: translate(-0%, -30px);
-  }
+/* CONTACT FORM */
+/* =============================== */
+.form {
+  border-radius: 0.5%;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #ffffffbf;
+  padding: 30px;
+  margin-top: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
+
 
 .form-group {
   margin-bottom: 1rem;
@@ -79,6 +111,45 @@ button[type="submit"] {
 
 h1 {
   font-family: Calibri;
-  font-weight: bold; 
+  font-weight: bold;
   color: #666284;
+}
+
+/* =============================== */
+
+/* MEDIA QUERY */
+/* =============================== */
+@media (max-width: 723px) {
+  .profile-picture {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contenedor-bio {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .title {
+    transform: translate(-0%, -50px);
+  }
+
+  .bio {
+    transform: translate(-0%, -30px);
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .form {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 364px) {
+  .lineone {
+    flex-direction: column;
+  }
 }

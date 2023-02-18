@@ -32,7 +32,7 @@
 
 <div class="form">
   <h1 class="text-center">Contáctame</h1>
-  <br>
+  <hr>
   <form (ngSubmit)="onSubmit($event)" [formGroup]="form">
 
     <!-- FROM NAME -->
@@ -76,3 +76,20 @@
     </div>
   </form>
 </div>
+
+<footer>
+  <nav>
+    <ul class="lineone">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#">Experiencia</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <br>
+    <ul class="linetwo">
+      <li *ngFor="let redes of social"><a target=”_blank” href="{{ redes.link }}"><i class="{{redes.icon}}"></i>
+          {{redes.nombre }}</a></li>
+    </ul>
+  </nav>
+</footer>
