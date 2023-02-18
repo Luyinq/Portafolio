@@ -21,13 +21,47 @@
 </div>
 
 
-
-
-
-
-
-
-
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="perfil-item">
+        <h5>Lenguajes</h5><hr>
+        <ul><li *ngFor="let language of progLanguages"><i class="{{language.icon}}"></i> {{language.name}}</li></ul>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="perfil-item">
+        <h5>Frameworks</h5><hr><ul><li *ngFor="let framework of frameworks"><i class="{{framework.icon}}"></i> {{framework.name}}</li></ul>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="perfil-item">
+        <h5>Herramientas</h5><hr>
+        <ul><li *ngFor="let software of softwares"><i class="{{software.icon}}"></i> {{software.name}}</li></ul>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="perfil-item">
+        <h5>SO</h5><hr>
+        <ul><li *ngFor="let os of operationSystems"><i class="{{os.icon}}"></i> {{os.name}}</li></ul>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="perfil-item">
+        <h5>Base de datos</h5><hr>
+        <ul><li *ngFor="let db of databases"><i class="{{db.icon}}"></i> {{db.name}}</li></ul>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
 <div class="form">
@@ -66,7 +100,6 @@
       <label for="message" class="form-label">Mensaje</label>
       <textarea class="form-control" id="message" name="message" formControlName="message"></textarea>
     </div>
-
     <!-- MESSAGE ERRORS -->
     <div *ngIf="f['message'].touched && f['message'].invalid" class="alert alert-danger">
       <div *ngIf="f['message'].errors && f['message'].errors['required']">Rellene el campo.</div>
@@ -88,8 +121,8 @@
     </ul>
     <br>
     <ul class="linetwo">
-      <li *ngFor="let redes of social"><a target=”_blank” href="{{ redes.link }}"><i class="{{redes.icon}}"></i>
-          {{redes.nombre }}</a></li>
+      <li *ngFor="let redes of redes"><a target=”_blank” href="{{ redes.link }}"><i class="{{redes.icon}}"></i>
+          {{redes.name }}</a></li>
     </ul>
   </nav>
 </footer>
