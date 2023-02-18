@@ -41,7 +41,7 @@ interface Database {
 export class AppComponent {
   title = 'portafolio';
 
-  
+
   //INTERFACES
   redes: Redes[] = [
     { name: 'Instagram', icon: "bi bi-instagram", link: "https://www.instagram.com/lucas.0xc/" },
@@ -101,14 +101,17 @@ export class AppComponent {
   }
 
   public onSubmit(e: Event) {
-    e.preventDefault();
-    emailjs.sendForm("service_kpy0o17", "template_295eihn", e.target as HTMLFormElement, 'WQrwC2ydtySqBDjoN')
-      .then((result: EmailJSResponseStatus) => {
-        alert("Resultado: " + result.text + "\nEl correo se ha enviado con éxito");
-        (e.target as HTMLFormElement).reset();
-      }, (error) => {
-        alert(error.text);
-      });
-  }
+    const submitButton = document.getElementById('submit-btn') as HTMLButtonElement;
+    submitButton.addEventListener('click', function() {
+      submitButton.disabled = true;});
+      e.preventDefault();
+      emailjs.sendForm("service_kpy0o17", "template_295eihn", e.target as HTMLFormElement, 'WQrwC2ydtySqBDjoN')
+        .then((result: EmailJSResponseStatus) => {
+          alert("Resultado: " + result.text + "\nEl correo se ha enviado con éxito");
+          (e.target as HTMLFormElement).reset();
+        }, (error) => {
+          alert(error.text);
+        });
+    }
 
 }
