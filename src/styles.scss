@@ -1,7 +1,7 @@
 body {
     background-image: 
-      linear-gradient(rgba(8, 8, 51, 0.795), rgba(5, 4, 26, 0.877)), 
-      url(./assets/img/background.jpg);
+      linear-gradient(rgba(8, 8, 51, 0.795), rgba(22, 19, 68, 0.877)), 
+      url(https://img.freepik.com/premium-photo/beautiful-vintage-colorful-cloud-sky-abstract-background-soft-color-pastel-color_55716-3314.jpg?w=2000);
     background-size: 
       100% 100%, 
       cover;
@@ -15,3 +15,42 @@ body {
   position: sticky;
   background-color: rgb(199 197 197 / 10%);;
 }
+
+footer {
+  background-color: rgb(199 197 197 / 10%)  ;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.form {
+  border-radius:0.5%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffffbf;
+  padding: 30px;
+  margin-top: 80px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+

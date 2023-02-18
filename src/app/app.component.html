@@ -1,19 +1,78 @@
-<div class="container slide-in" id="inicio">
-    <img src="./assets/img/perfil.png" class="profile-picture">
-      <div class="title"><h1>Lucas Alegre</h1>
-      <p>Estudiante analista programador computacional cursando cuarto semestre, con un excelente promedio académico y gran capacidad de aprendizaje.
-
-Desde pequeño he sido acérrimo a la tecnología y creación de esta. Me he desenvuelto independientemente durante 2 años trabajando con hardware y software, manutención, ensamblado y orientación del cliente. Siempre destacando en la atención y eficiencia.
-
-Puedo definirme como una persona proactiva, puntual, atenta, siempre en busca de desafíos. Adquiero información muy rápidamente y ofrezco mi apoyo en cualquier tipo de ambiente laboral, suelo tomar el rol de liderazgo. Creo que lo más importante en un equipo de trabajo es la cercanía, ya que el verdadero respeto y compromiso nace de un vínculo estable.</p></div>
+<div class="contenedor-bio slide-in" id="inicio">
+  <img src="./assets/img/perfil.png" class="profile-picture">
+  <div class="title">
+    <h1>Lucas Alegre</h1>
+    <hr>
+  </div>
+  <div class="bio">
+    <p>Estudiante analista programador computacional cursando cuarto semestre, con un excelente promedio académico y
+      gran capacidad de aprendizaje.
+      Desde pequeño he sido acérrimo a la tecnología y creación de esta. Me he desenvuelto independientemente durante 2
+      años trabajando con hardware y software, manutención, ensamblado y orientación del cliente. Siempre destacando en
+      la atención y eficiencia.
+      <br>
+      Puedo definirme como una persona proactiva, puntual, atenta, siempre en busca de desafíos. Adquiero información
+      muy rápidamente y ofrezco mi apoyo en cualquier tipo de ambiente laboral, suelo tomar el rol de liderazgo.
+      <br>
+      Creo que lo más importante en un equipo de trabajo es la cercanía, ya que el verdadero respeto y compromiso
+      nace de un vínculo estable.
+    </p>
+  </div>
 </div>
 
-<div class="container slide-in">
-  <h1>Lucas Alegre</h1>
-    <p>Quiero plata, denme plata</p>
-</div>
 
-<div class="container slide-in" id="prueba">
-  <h1>Lucas Alegre</h1>
-    <p>Quiero plata, denme plata</p>
+
+
+
+
+
+
+
+
+
+<div class="form">
+  <h1 class="text-center">Contáctame</h1>
+  <br>
+  <form (ngSubmit)="onSubmit($event)" [formGroup]="form">
+
+    <!-- FROM NAME -->
+    <div class="form-group">
+      <label for="from_name" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="from_name" name="from_name" formControlName="from_name">
+      <div class="invalid-feedback">Por favor ingrese su nombre</div>
+    </div>
+
+    <!-- FROM_NAME ERRORS -->
+    <div *ngIf="f['from_name'].touched && f['from_name'].invalid" class="alert alert-danger">
+      <div *ngIf="f['from_name'].errors && f['from_name'].errors['required']" class="slide-in">Rellene el campo.</div>
+      <div *ngIf="f['from_name'].errors && f['from_name'].errors['minlength']">El nombre debe tener al menos 3 letras.
+      </div>
+    </div>
+
+    <!-- FROM EMAIL -->
+    <div class="form-group">
+      <label for="from_email" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="from_email" name="from_email" formControlName="from_email">
+    </div>
+
+    <!-- FROM EMAIL ERRORS -->
+    <div *ngIf="f['from_email'].touched && f['from_email'].invalid" class="alert alert-danger">
+      <div *ngIf="f['from_email'].errors && f['from_email'].errors['required']">Rellene el campo.</div>
+      <div *ngIf="f['from_email'].errors && f['from_email'].errors['email']">Ingrese un correo válido.</div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="form-group">
+      <label for="message" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="message" name="message" formControlName="message"></textarea>
+    </div>
+
+    <!-- MESSAGE ERRORS -->
+    <div *ngIf="f['message'].touched && f['message'].invalid" class="alert alert-danger">
+      <div *ngIf="f['message'].errors && f['message'].errors['required']">Rellene el campo.</div>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="form.invalid">Enviar</button>
+    </div>
+  </form>
 </div>
