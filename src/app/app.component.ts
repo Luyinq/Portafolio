@@ -108,6 +108,8 @@ export class AppComponent {
       emailjs.sendForm("service_kpy0o17", "template_295eihn", e.target as HTMLFormElement, 'WQrwC2ydtySqBDjoN')
         .then((result: EmailJSResponseStatus) => {
           alert("Resultado: " + result.text + "\nEl correo se ha enviado con éxito");
+          submitButton.addEventListener('click', function() {
+            submitButton.disabled = false;});
           (e.target as HTMLFormElement).reset();
         }, (error) => {
           alert(error.text);
