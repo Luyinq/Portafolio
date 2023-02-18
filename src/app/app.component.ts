@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 
+  interface Redes {
+    nombre: string;
+    icon: string;
+    link: string;
+  }
 
 @Component({
   selector: 'app-root',
@@ -10,6 +15,13 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class AppComponent {
   title = 'portafolio';
+
+
+
+  social: Redes[] = [
+    { nombre: 'Instagram', icon: "bi bi-instagram", link: "https://www.instagram.com/lucas.0xc/"},
+    { nombre: 'Linkedin', icon: "bi bi-linkedin", link: "https://www.linkedin.com/in/lnag/"}
+  ];
 
   form = new FormGroup({
     from_name: new FormControl('', [Validators.required, Validators.minLength(3)]),
