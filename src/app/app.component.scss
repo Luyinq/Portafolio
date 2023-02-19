@@ -136,7 +136,7 @@ textarea.ng-invalid.ng-touched {
 
 /* PERFIL */
 /* =============================== */
-.contenedor-perfil {
+.perfil {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
@@ -154,9 +154,19 @@ textarea.ng-invalid.ng-touched {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.conocimientos {
+  right: 5%;
+  position: relative;
+}
+
 .carousel {
-  width: 90%;
-  left: 5%;
+  width: 45%;
+  right: 5%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 30%;
 }
 
 h5 {
@@ -219,10 +229,50 @@ ul {
   .perfil-item {
     width: 70%;
   }
+
+  .perfil{
+    width: 100%;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .conocimientos {
+    width: 95%;
+    height: auto;
+    right: 0%;
+    position: relative;
+  }
+  
+  .carousel {
+    margin-top: -80px;
+    width: 90%;
+    right: 0%;
+  }
+  
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: auto;
+  }
 }
 
 @media (max-width: 364px) {
   .lineone {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 724px) {
+  .conocimientos {
+    right: 3%;
+    position: relative;
+  }
+
+  .carousel {
+    width: 47%;
+    right: 2%;
+  }
+
+  .perfil {
+    width: 100%;
   }
 }
