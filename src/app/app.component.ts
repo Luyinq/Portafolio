@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+  //INTERFACES
 interface Redes {
   name: string;
   icon: string;
@@ -42,7 +43,7 @@ export class AppComponent {
   title = 'portafolio';
 
 
-  //INTERFACES
+  //OBJECTS
   redes: Redes[] = [
     { name: 'Instagram', icon: "bi bi-instagram", link: "https://www.instagram.com/lucas.0xc/" },
     { name: 'Linkedin', icon: "bi bi-linkedin", link: "https://www.linkedin.com/in/lnag/" }

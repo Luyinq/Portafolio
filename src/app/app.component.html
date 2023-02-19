@@ -20,49 +20,76 @@
   </div>
 </div>
 
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="perfil-item">
-        <h5>Lenguajes</h5><hr>
-        <ul><li *ngFor="let language of progLanguages"><i class="{{language.icon}}"></i> {{language.name}}</li></ul>
+<div class="perfil">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="perfil-item">
+          <h5>Lenguajes</h5>
+          <hr>
+          <ul>
+            <li *ngFor="let language of progLanguages"><i class="{{language.icon}}"></i> {{language.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="perfil-item">
+          <h5>Frameworks</h5>
+          <hr>
+          <ul>
+            <li *ngFor="let framework of frameworks"><i class="{{framework.icon}}"></i> {{framework.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="perfil-item">
+          <h5>Herramientas</h5>
+          <hr>
+          <ul>
+            <li *ngFor="let software of softwares"><i class="{{software.icon}}"></i> {{software.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="perfil-item">
+          <h5>SO</h5>
+          <hr>
+          <ul>
+            <li *ngFor="let os of operationSystems"><i class="{{os.icon}}"></i> {{os.name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="perfil-item">
+          <h5>Base de datos</h5>
+          <hr>
+          <ul>
+            <li *ngFor="let db of databases"><i class="{{db.icon}}"></i> {{db.name}}</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <div class="perfil-item">
-        <h5>Frameworks</h5><hr><ul><li *ngFor="let framework of frameworks"><i class="{{framework.icon}}"></i> {{framework.name}}</li></ul>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="perfil-item">
-        <h5>Herramientas</h5><hr>
-        <ul><li *ngFor="let software of softwares"><i class="{{software.icon}}"></i> {{software.name}}</li></ul>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="perfil-item">
-        <h5>SO</h5><hr>
-        <ul><li *ngFor="let os of operationSystems"><i class="{{os.icon}}"></i> {{os.name}}</li></ul>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="perfil-item">
-        <h5>Base de datos</h5><hr>
-        <ul><li *ngFor="let db of databases"><i class="{{db.icon}}"></i> {{db.name}}</li></ul>
-      </div>
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="perfil-item conocimientos">
+    <h5>Mis conocimientos</h5>
+    <hr>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus nisl non vestibulum malesuada. Curabitur
+        suscipit purus eu fermentum iaculis. Duis ac quam vitae tortor suscipit varius. Integer augue augue, accumsan eu
+        orci eget, consequat ullamcorper dolor. In ornare, orci auctor varius tincidunt, justo mi facilisis leo, non
+        vestibulum tellus massa sed tortor.
+      </li>
+    </ul>
+  </div>
 </div>
-
 
 <div class="form">
   <h1 class="text-center">Contáctame</h1>
@@ -105,7 +132,8 @@
       <div *ngIf="f['message'].errors && f['message'].errors['required']">Rellene el campo.</div>
     </div>
     <div class="d-grid gap-2">
-      <button id="submit-btn" type="submit" class="btn btn-primary btn-lg btn-block" [disabled]="form.invalid">Enviar</button>
+      <button id="submit-btn" type="submit" class="btn btn-primary btn-lg btn-block"
+        [disabled]="form.invalid">Enviar</button>
     </div>
   </form>
 </div>
