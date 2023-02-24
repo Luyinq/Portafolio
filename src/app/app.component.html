@@ -91,6 +91,18 @@
   </div>
 </div>
 
+<div class="contenedor-bio">
+  <div class="job-list">
+    <div *ngFor="let job of jobs; index as x" class="job">
+      <h2 class="job-title">{{job.position}}</h2>
+      <h2 class="job-company">{{job.company}}</h2>
+      <p class="job-dates">{{job.dateStart | date:'dd-MM-yyyy'}} - {{job.dateEnd | date:'dd-MM-yyyy'}}</p>
+      <p class="job-description">{{job.description}}</p>
+      <hr *ngIf="x < jobs.length - 1">
+    </div>
+  </div>
+</div>
+
 <div class="form">
   <h1 class="text-center">Contáctame</h1>
   <hr>

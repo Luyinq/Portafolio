@@ -1,38 +1,8 @@
 import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Redes, ProgLanguages, Frameworks, Software, OperationSystem, Database, Job } from './interfaces.service';
 
-  //INTERFACES
-interface Redes {
-  name: string;
-  icon: string;
-  link: string;
-}
-
-interface ProgLanguages {
-  name: string;
-  icon: string;
-}
-
-interface Frameworks {
-  name: string;
-  icon: string;
-}
-
-interface Software {
-  name: string;
-  icon: string;
-}
-
-interface OperationSystem {
-  name: string;
-  icon: string;
-}
-
-interface Database {
-  name: string;
-  icon: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -87,6 +57,29 @@ export class AppComponent {
     { name: 'MySQL', icon: "devicon-mysql-plain" },
     { name: 'SQLite', icon: "devicon-sqlite-plain" },
     { name: 'FireBase', icon: "devicon-firebase-plain" }
+  ];
+
+  jobs: Job[] = [
+    { position: "Analista Programador",
+      company: "Asociación de Guías y Scouts Chile",
+      dateStart: new Date("2022-10-19"),
+      dateEnd: new Date("2022-10-19"),
+      description: "Esto es una prueba" },
+     { position: "Analista Programador",
+      company: "Asociación de Guías y Scouts Chile",
+      dateStart: new Date("2022-10-19"),
+      dateEnd: new Date("2022-10-19"),
+      description: "Esto es una prueba"},
+      { position: "Analista Programador",
+      company: "Asociación de Guías y Scouts Chile",
+      dateStart: new Date("2022-10-19"),
+      dateEnd: new Date("2022-10-19"),
+      description: "Esto es una prueba"},
+      { position: "Analista Programador",
+      company: "Asociación de Guías y Scouts Chile",
+      dateStart: new Date("2022-10-19"),
+      dateEnd: new Date("2022-10-19"),
+      description: "Esto es una prueba"},
   ];
 
   //CONTACT FORM
