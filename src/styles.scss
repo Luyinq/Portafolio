@@ -1,20 +1,34 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
 body {
-    background-image: 
-      linear-gradient(rgba(8, 8, 51, 0.795), rgba(22, 19, 68, 0.877)), 
-      url(https://img.freepik.com/premium-photo/beautiful-vintage-colorful-cloud-sky-abstract-background-soft-color-pastel-color_55716-3314.jpg?w=2000);
-    background-size: 
-      100% 100%, 
-      cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-
-  }
-
-.custom-nav {
-  position: sticky;
-  background-color: rgb(199 197 197 / 10%);;
+  background-image:
+    linear-gradient(rgba(8, 8, 51, 0.795), rgba(22, 19, 68, 0.877)),
+    url(https://img.freepik.com/premium-photo/beautiful-vintage-colorful-cloud-sky-abstract-background-soft-color-pastel-color_55716-3314.jpg?w=2000);
+  background-size:
+    100% 100%,
+    cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
+.custom-nav {
+  background-color: rgb(199 197 197 / 10%);
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+@media (max-width: 991px) {
+  .custom-nav {
+    text-align: center;
+    padding: 20px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    font-size:20px;
+  }
+}

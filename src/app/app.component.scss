@@ -159,7 +159,7 @@ textarea.ng-invalid.ng-touched {
   position: relative;
 }
 
-.carousel {
+.carousel-custom {
   width: 45%;
   right: 5%;
 }
@@ -189,6 +189,8 @@ ul {
 
 .job {
   margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .job-title {
@@ -235,6 +237,34 @@ ul {
 
 .job-list::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+.projects {
+  width: 80%;
+  margin-top: 80px;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  border-radius: 0.5%;
+  background-color: #ffffffbf;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects-carousel {
+  width:55%;
+}
+
+.projects-content {
+  width:45%;
+}
+
+.projects img {
+  width: 550px;
+  height: 550px;
+  border-radius: 1.5%;
+  padding: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -320,3 +350,4 @@ ul {
     width: 100%;
   }
 }
+

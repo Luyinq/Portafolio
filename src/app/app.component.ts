@@ -64,22 +64,7 @@ export class AppComponent {
       company: "Asociación de Guías y Scouts Chile",
       dateStart: new Date("2022-10-19"),
       dateEnd: new Date("2022-10-19"),
-      description: "Esto es una prueba" },
-     { position: "Analista Programador",
-      company: "Asociación de Guías y Scouts Chile",
-      dateStart: new Date("2022-10-19"),
-      dateEnd: new Date("2022-10-19"),
-      description: "Esto es una prueba"},
-      { position: "Analista Programador",
-      company: "Asociación de Guías y Scouts Chile",
-      dateStart: new Date("2022-10-19"),
-      dateEnd: new Date("2022-10-19"),
-      description: "Esto es una prueba"},
-      { position: "Analista Programador",
-      company: "Asociación de Guías y Scouts Chile",
-      dateStart: new Date("2022-10-19"),
-      dateEnd: new Date("2022-10-19"),
-      description: "Esto es una prueba"},
+      description: "Esto es una prueba" }
   ];
 
   //CONTACT FORM
