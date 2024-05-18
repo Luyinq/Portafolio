@@ -60,11 +60,20 @@ export class AppComponent {
   ];
 
   jobs: Job[] = [
-    { position: "Analista Programador",
+    {
+      position: "Analista Programador",
       company: "Asociación de Guías y Scouts Chile",
       dateStart: new Date("2022-10-19"),
       dateEnd: new Date("2022-10-19"),
-      description: "Esto es una prueba" }
+      description: "Esto es una prueba"
+    },
+    {
+      position: "Analista Programador",
+      company: "Demafront",
+      dateStart: new Date("2023-10-19"),
+      dateEnd: new Date(),
+      description: "Esto es una prueba"
+    }
   ];
 
   //CONTACT FORM
@@ -81,18 +90,20 @@ export class AppComponent {
 
   public onSubmit(e: Event) {
     const submitButton = document.getElementById('submit-btn') as HTMLButtonElement;
-    submitButton.addEventListener('click', function() {
-      submitButton.disabled = true;});
-      e.preventDefault();
-      emailjs.sendForm("service_kpy0o17", "template_295eihn", e.target as HTMLFormElement, 'WQrwC2ydtySqBDjoN')
-        .then((result: EmailJSResponseStatus) => {
-          alert("Resultado: " + result.text + "\nEl correo se ha enviado con éxito");
-          submitButton.addEventListener('click', function() {
-            submitButton.disabled = false;});
-          (e.target as HTMLFormElement).reset();
-        }, (error) => {
-          alert(error.text);
+    submitButton.addEventListener('click', function () {
+      submitButton.disabled = true;
+    });
+    e.preventDefault();
+    emailjs.sendForm("service_kpy0o17", "template_295eihn", e.target as HTMLFormElement, 'T4qg-_6HV2bW1ghQZ')
+      .then((result: EmailJSResponseStatus) => {
+        alert("Resultado: " + result.text + "\nEl correo se ha enviado con éxito");
+        submitButton.addEventListener('click', function () {
+          submitButton.disabled = false;
         });
-    }
+        (e.target as HTMLFormElement).reset();
+      }, (error) => {
+        alert(error.text);
+      });
+  }
 
 }
