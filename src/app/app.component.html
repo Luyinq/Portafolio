@@ -1,0 +1,81 @@
+<!--INTRODUCCIÓN-->
+<div id="intro">
+    <div id="intro-animaciones">
+        <div id="ig"><img src="../assets/img/ig.gif" alt=""></div>
+        <div id="model-pc"></div>
+        <div id="ig-2"><img src="../assets/img/ig-2.gif" alt=""></div>
+    </div>
+    <div id="intro-titulo">
+        <h1>Bienvenido a mi portafolio</h1>
+    </div>
+    <div id="intro-info">
+        <p>¡Buenas! Mi nombre es Lucas. <br>
+            Soy un desarrollador full stack y analista programador. Me especializo en crear soluciones
+            tecnológicas eficientes y escalables. Me atraen las nuevas
+            tecnologías como la IA y plataformas cloud, siempre busco mejorar la
+            experiencia de usuario a través de un diseño intuitivo y funcional.
+            Además, me motiva el aprendizaje constante y estar al día con las últimas tendencias.
+            <br> <br>A continuación, te invito a conocer algunos de los proyectos que he desarrollado a lo largo de mi
+            carrera.
+        </p>
+        <button type="button" class="btn btn-primary btn-lg">Descargar Curriculum</button>
+    </div>
+</div>
+
+<div id="divisor">
+    <hr>
+</div>
+
+<!--PROYECTOS-->
+<div id="proyectos" #proyectos>
+    <div id="proyectos-titulo">
+        <h1>Proyectos</h1>
+    </div>
+    <div id="proyectos-lista">
+        <ul>
+            <li *ngFor="let project of projectsList">
+                <div id="proyectos-screnshots-container">
+                    <div id="proyectos-screenshots">
+                        <img *ngFor="let img of project.screenshots" [src]="img" alt="Imagen del proyecto">
+                    </div>
+                </div>
+                <h3>{{ project.name }}</h3>
+                <div id="proyectos-p-container">
+                    <p>{{ project.description }}</p>
+                    <p>Estado: {{ project.status }}</p>
+                    <p>{{ project.tech }}
+                        <br>
+                        <span id="tech-icons">
+                            <i *ngFor="let item of project['techIcon']" [class]="item.icon"></i>
+                        </span>
+                    </p>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" [disabled]="!project.link"
+                    (click)="goToLink(project.link)">
+                    <i class="fa-brands fa-github"></i>&nbsp;Ir al repositorio
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="divisor">
+    <hr>
+</div>
+
+<!--CONOCIMIENTOS-->
+<div id="conocimientos">
+    <div id="conocimientos-titulo">
+        <h1>Conocimientos</h1>
+    </div>
+    <div id="conocimientos-lista" #conocimientos>
+        <div *ngFor="let categoria of categorias">
+            <h2>{{ categoria.title }}</h2>
+            <ul>
+                <li *ngFor="let item of categoria.items">
+                    <i [class]="item.icon"></i> {{ item.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

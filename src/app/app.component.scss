@@ -1,0 +1,337 @@
+//INTRODUCCIÓN
+#intro {
+    font-family: "Jersey 10", sans-serif; // Font family
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#intro-animaciones {
+    display: flex;
+}
+
+#intro-info {
+    text-align: justify; // Justifica el texto para que las líneas tengan el mismo ancho
+    padding: 20px;
+    font-size: 30px;
+    width: 50%;
+}
+
+#model-pc {
+    width: 50%; // Ajusta según tus necesidades
+    height: 50vh; // Asegura que ocupe el 100% de la altura de la ventana gráfica
+}
+
+#ig,
+#ig-2 {
+    width: 25%;
+    height: 200px;
+    opacity: 0.1;
+}
+
+#ig::before,
+#ig-2::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(67, 16, 114), rgba(42, 12, 77, 0.753), rgba(42, 12, 77, 0.753), rgb(67, 16, 114));
+    opacity: 0.5; // Ajusta la opacidad según tus necesidades
+}
+
+#ig img,
+#ig-2 img {
+    width: 100%;
+}
+
+//PROYECTOS
+#proyectos {
+    font-family: "Jersey 10", sans-serif; // Font family
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#proyectos-p-container {
+    display:inline-block;
+    width: 80%;
+}
+
+#proyectos-lista ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#proyectos-lista p {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#proyectos-lista li {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 70%; /* Ajusta el ancho según tus necesidades */
+}
+
+#proyectos-lista button:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer click */
+    background-color: rgba(255, 255, 255, 0.3); /* Cambia el color de fondo al hacer click */
+}
+
+#proyectos-lista i {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono según tus necesidades */
+    margin-bottom: 10px;
+}
+
+#proyectos-lista h3 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+}
+
+#proyectos-lista p {
+    font-size: 1.2rem;
+}
+
+#proyectos-screenshots-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#proyectos-screenshots img {
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    aspect-ratio: 1 / 1; /* Asegura que la imagen sea cuadrada */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 2px;
+    border: 2px solid white;
+}
+
+#tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+//CONOCIMIENTOS
+#conocimientos {
+    font-family: "Jersey 10", sans-serif; // Font family
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#conocimientos-lista {
+    margin-top: 20px;
+}
+
+#conocimientos-lista ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#conocimientos-lista li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+    opacity: 0; /* Inicialmente invisible */
+    transform: scale(0.5); /* Inicialmente más pequeño */
+    animation: zoomInFadeIn 1.5s forwards; /* Aplica la animación */
+    animation-play-state: paused; /* Pausa la animación inicialmente */
+    transition: transform 0.3s, background-color 0.3s; /* Transición para hover y click */
+}
+
+#conocimientos-lista i {
+    font-size: 2rem; /* Ajusta el tamaño del ícono según tus necesidades */
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#conocimientos-lista h2 {
+    padding: 10px;
+}
+
+#conocimientos-lista li:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#conocimientos-lista li:active {
+    transform: scale(0.9); /* Reduce el tamaño al hacer click */
+    background-color: rgba(255, 255, 255, 0.3); /* Cambia el color de fondo al hacer click */
+}
+
+//GENÉRICO
+h1 {
+    margin-top: 20px;
+    font-size: 60px;
+    background-color: rgba(93, 89, 104, 0.699);
+    padding: 20px;
+    width: auto;
+}
+
+button {
+    border-radius: 0;
+    border-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+    font-size: 30px;
+    transition: transform 0.15s ease; // Smooth transition for the transform property with a slower duration
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5); // Background color for active link
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1); // Increase the size of the toggler
+}
+
+.btn:disabled {
+    background-color: rgba(255, 0, 0, 0);
+    border-color: white;
+}
+
+.btn:active {
+    background-color: rgba(255, 255, 255, 0.5); // Background color for active link
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.0); // Increase the size of the toggler
+}
+
+hr {
+    border: none; // Eliminar el borde predeterminado
+    border-top: 4px double white; // Establecer un borde superior sólido
+    margin: 20px 0; // Espaciado vertical
+    width: 60%;
+    left: 20%;
+    position: relative;
+    border-radius: 0; // Asegurar que las líneas no sean redondeadas
+}
+
+#divisor {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 1024px) and (min-width: 801px) {
+
+    #intro-info {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    #proyectos-lista li {
+        width: 100%;
+    }
+    
+    #proyectos-screenshots img {
+        width: 100%; /* Ajusta el ancho según tus necesidades */
+        height: 100%; /* Ajusta la altura según tus necesidades */
+        border-radius: 2px;
+        border: 2px solid white;
+    }
+
+    #proyectos-p-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) and (min-width: 0px) {
+    h1 {
+        font-size: 35px; // Ajusta el ancho al 100% en pantallas pequeñas
+    }
+
+    #intro-info {
+        font-size: 20px;
+    }
+
+    #proyectos-lista li {
+        width: 100%;
+    }
+    
+    #proyectos-screenshots img {
+        width: 100%; /* Ajusta el ancho según tus necesidades */
+        height: 100%; /* Ajusta la altura según tus necesidades */
+        border-radius: 2px;
+        border: 2px solid white;
+    }
+
+    #proyectos-p-container {
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 0px) {
+
+    #model-pc {
+        width: 100%; // Ajusta el ancho al 100% en pantallas pequeñas
+    }
+
+    #intro-info {
+        width: 100%;
+    }
+
+    #ig,
+    #ig-2 {
+        width: 0%;
+    }
+
+    #proyectos-lista li {
+        width: 100%;
+    }
+    
+    #proyectos-screenshots img {
+        width: 100%; /* Ajusta el ancho según tus necesidades */
+        height: 100%; /* Ajusta la altura según tus necesidades */
+        border-radius: 2px;
+        border: 2px solid white;
+    }
+
+    #proyectos-p-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1025px){
+
+    #intro-info {
+        width: 60%;
+    }
+}
+
+/* Definir la animación zoomInFadeIn */
+@keyframes zoomInFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Inicialmente más pequeño */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Tamaño normal */
+    }
+}
