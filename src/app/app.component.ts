@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { Categoria, Database, Frameworks, Job, OperationSystem, ProgLanguages, Project, Redes, Software } from './interfaces/interfaces.service';
 
 @Component({
